@@ -72,20 +72,20 @@ function checkDraw() {
     return gameState.every((cell) => cell !== '')
 }
 
-/*Updates the score display in the UI */
+/* Updates the score display in the UI */
 function updateScore() {
     scoreX.textContent = score.X
     scoreO.textContent = score.O
 }
 
-/*Highlights the winning cells by changing their text color */
+/* Highlights the winning cells by changing their text color */
 function highlightWinningCells(condition) {
     condition.forEach((index) => {
         cells[index].style.color = 'red'
     })
 }
 
-/*Resets the game board for a new round (keeps scores) */
+/* Resets the game board for a new round (keeps scores) */
 function resetGame() {
     gameState = ['', '', '', '', '', '', '', '', '']
     cells.forEach((cell) => {
